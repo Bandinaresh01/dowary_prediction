@@ -7,9 +7,10 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained model
-with open("C:\programming\machine_learning_projects\host_project_dowry\model.pkl", "rb") as file:
+# with open("C:\programming\machine_learning_projects\host_project_dowry\model.pkl", "rb") as file:
+#     model = pickle.load(file)
+with open("model.pkl", "rb") as file:
     model = pickle.load(file)
-
 # Feature columns (ensure the order matches the training data)
 FEATURE_COLUMNS = [
     "Age", "Income", "Family_Wealth", "Siblings",
